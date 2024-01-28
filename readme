@@ -1,0 +1,12 @@
+Commentaires dans le code :
+
+initialValues : On définit ici les valeurs initiales pour chaque champ de notre formulaire (nom, email, message).
+validate : Cette fonction est utilisée pour valider les champs du formulaire. Elle retourne un objet errors contenant les messages d'erreur pour chaque champ invalidé.
+onSubmit : Fonction qui est exécutée lorsque le formulaire est soumis. Ici, on utilise Axios pour envoyer les données du formulaire à un serveur. setSubmitting(false) est appelé après l'envoi pour réinitialiser l'état de soumission.
+
+<Formik> : Le composant Formik englobe tout le formulaire. Il prend les props initialValues, validate et onSubmit.
+<Form> : Un composant Formik qui crée un formulaire. Il utilise le contexte de Formik pour la soumission et la gestion des erreurs.
+<Field> : Remplace les éléments de formulaire <input>, <textarea>, etc. Il se connecte automatiquement à Formik et gère les valeurs des champs et affiche les erreurs.
+<ErrorMessage> : Affiche les messages d'erreur pour chaque champ si des erreurs de validation sont présentes.
+
+N'oubliez pas de remplacer 'URL_DU_SERVEUR' par l'URL réelle de votre serveur ou API. Ce code représente un formulaire de base utilisant Formik et Axios pour la gestion et l'envoi de données.
